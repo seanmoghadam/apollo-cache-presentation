@@ -1,0 +1,19 @@
+query getUsers {
+  users {
+    data {
+      ...UserBasicFragment
+      ...UserTimestamps
+    }
+  }
+}
+
+fragment UserBasicFragment on User {
+  name
+  id
+  email
+}
+
+fragment UserTimestamps on User {
+  createdAt
+  updatedAt
+}
