@@ -60,7 +60,6 @@ export default class Stats {
       )
       .map((sibling: any) => sibling.files)
       .concat(initial.files)
-      .flat()
       .filter((file: string) => file.endsWith(".js"))
       .map((file: string) => `/${file}`);
 
